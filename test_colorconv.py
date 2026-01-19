@@ -25,3 +25,11 @@ def test_rgb_to_hsl_for_pure_red():
 def test_hsl_round_trip():
     rgb = (59, 130, 246)
     assert colorconv.hsl_to_rgb(colorconv.rgb_to_hsl(rgb)) == rgb
+
+
+def test_parse_accepts_rgb_call():
+    assert colorconv.parse("rgb(59, 130, 246)") == (59, 130, 246)
+
+def test_contrast_black_on_white_is_21():
+    ratio = colorconv.contrast_ratio((0, 0, 0), (255, 255, 255))
+    assert round(ratio, 1) == 21.0
