@@ -33,3 +33,9 @@ def test_parse_accepts_rgb_call():
 def test_contrast_black_on_white_is_21():
     ratio = colorconv.contrast_ratio((0, 0, 0), (255, 255, 255))
     assert round(ratio, 1) == 21.0
+
+
+def test_wcag_grades():
+    assert colorconv.wcag_grade(21) == "AAA"
+    assert colorconv.wcag_grade(4.6) == "AA"
+    assert colorconv.wcag_grade(1.2) == "fail"
