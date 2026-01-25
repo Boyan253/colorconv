@@ -27,3 +27,15 @@ hsl  hsl(217, 91%, 60%)
 contrast with #ffffff
 ratio 3.68:1  -> AA large text only
 ```
+
+## Contrast
+
+The ratio is WCAG 2.1 relative luminance, the same number browsers and
+accessibility auditors report.
+
+| ratio | verdict |
+|-------|---------|
+| ≥ 7.0 | AAA |
+| ≥ 4.5 | AA — normal body text |
+| ≥ 3.0 | AA for large text (18pt+, or 14pt bold) only |
+| < 3.0 | fail |
