@@ -39,3 +39,9 @@ accessibility auditors report.
 | ≥ 4.5 | AA — normal body text |
 | ≥ 3.0 | AA for large text (18pt+, or 14pt bold) only |
 | < 3.0 | fail |
+
+## Accepted input
+
+`#rgb`, `#rrggbb`, with or without the `#`, `rgb(…)` / `rgba(…)`, and
+`hsl(…)` / `hsla(…)`. Alpha is parsed and ignored — contrast against a
+semi-transparent color depends on what is behind it.
