@@ -45,3 +45,10 @@ accessibility auditors report.
 `#rgb`, `#rrggbb`, with or without the `#`, `rgb(…)` / `rgba(…)`, and
 `hsl(…)` / `hsla(…)`. Alpha is parsed and ignored — contrast against a
 semi-transparent color depends on what is behind it.
+
+## Tests
+
+```
+pip install pytest
+pytest
+```
