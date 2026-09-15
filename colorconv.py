@@ -5,6 +5,8 @@ import argparse
 import re
 import sys
 
+__version__ = "0.1.0"
+
 HEX = re.compile(r"^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$")
 RGB_CALL = re.compile(r"^rgba?\(([^)]+)\)$", re.I)
 HSL_CALL = re.compile(r"^hsla?\(([^)]+)\)$", re.I)
@@ -92,6 +94,8 @@ def wcag_grade(ratio):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--version", action="version",
+                    version="%(prog)s " + __version__)
     ap.add_argument("color", help="#hex, rgb(r,g,b) or hsl(h,s%,l%)")
     ap.add_argument("--contrast", help="second color to compare against")
     args = ap.parse_args(argv)
